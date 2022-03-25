@@ -1,0 +1,39 @@
+:root {
+  --color-white: rgb(255, 255, 255);
+	--color-cyan: rgb(62, 234, 231);
+	--color-red: rgb(255, 41, 101);
+	--color-grey: rgb(119, 127, 152);
+	--color-blue: rgb(9, 62, 103);
+	--color-bg: rgb(8, 12, 33);
+	
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+	background-color: var(--color-bg);
+	color: var(--color-grey);
+	font-family: 'Manrope', sans-serif;
+	font-weight: 500;
+}
+
+h1, h2, h3, h4 {
+	font-weight: 800;
+	color: var(--color-white);
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 1.667;
+}

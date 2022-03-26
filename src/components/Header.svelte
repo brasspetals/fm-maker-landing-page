@@ -17,7 +17,7 @@
     display: grid;
     justify-items: center;
     position: relative;
-    padding: 40px 0;
+    padding: 40px 0 146px;
   }
 
   .hero {
@@ -26,7 +26,7 @@
     background-position-x: center;
     background-repeat: no-repeat;
     background-size: 410px 233px;
-    padding: 342px 24px 65px;
+    padding: 342px 24px 0;
     text-align: center;
     overflow: hidden;
     display: grid;
@@ -52,7 +52,7 @@
   header::after {
     content: url('/images/icon-scroll.svg');
     position: absolute;
-    bottom: 26px;
+    bottom: 67px;
     left: 50%;
     transform: translateX(-50%);
   }

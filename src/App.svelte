@@ -1,9 +1,12 @@
 <script>
 	import Header from './components/Header.svelte';
+	import Features from './components/Features.svelte';
 </script>
 
-<Header></Header>
-
+<Header/>
+<main>
+<Features/>
+</main>
 
 <style>
 

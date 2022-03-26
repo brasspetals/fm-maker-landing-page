@@ -2,11 +2,12 @@
   export let src
   export let heading
   export let description
+  export let passions = false;
 </script>
 
 <div class="feature">
   <div class="feature-img">
-    <img src="{src}" alt="">
+    <img src="{src}" alt="" class={passions && 'passions'}>
   </div>
   <div class="feature-text">
     <h3>{heading}</h3>
@@ -34,6 +35,10 @@
 
   .feature-img img {
     width: 75%;
+  }
+
+  .passions {
+    transform: translateX(4px);
   }
 
   h3 {

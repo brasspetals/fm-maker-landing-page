@@ -1,4 +1,6 @@
-<script></script>
+<script>
+  import ListItem from './ListItem.svelte'
+</script>
 
 <section class="pricing">
   <div class="heading">
@@ -11,20 +13,14 @@
         <h3>Dip your toe</h3>
         <p>Just getting started? No problem at all! Our free plan will take you a long way.</p>
       </div>
-      <h4 class="plan-cost">Free</h4>
+      <div class="plan-cost">
+        <h4>Free</h4>
+      </div>
       <ul class="plan-features">
-        <li>
-          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path class="check" fill="#093F68" d="M10.319.768l1.363 1.464-7.128 6.634L.319 4.924 1.682 3.46l2.871 2.674z"/></svg> Unlimited products
-        </li>
-        <li>
-          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path class="check" fill="#093F68" d="M10.319.768l1.363 1.464-7.128 6.634L.319 4.924 1.682 3.46l2.871 2.674z"/></svg> Basic analytics
-        </li>
-        <li>
-          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path class="check" fill="#093F68" d="M10.319.768l1.363 1.464-7.128 6.634L.319 4.924 1.682 3.46l2.871 2.674z"/></svg> Limited marketplace exposure
-        </li>
-        <li>
-          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path class="check" fill="#093F68" d="M10.319.768l1.363 1.464-7.128 6.634L.319 4.924 1.682 3.46l2.871 2.674z"/></svg> 10% fee per transaction
-        </li>
+        <ListItem liText="Unlimited products" odd=true/>
+        <ListItem liText="Basic analytics" odd=true/>
+        <ListItem liText="Limited marketplace exposure" odd=true/>
+        <ListItem liText="10% fee per transaction" odd=true/>
       </ul>
     </div>
     <div class="plan even">
@@ -37,18 +33,10 @@
         <p>/ month</p>
       </div>
       <ul class="plan-features">
-        <li>
-          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path class="check" fill="#093F68" d="M10.319.768l1.363 1.464-7.128 6.634L.319 4.924 1.682 3.46l2.871 2.674z"/></svg> Custom domain
-        </li>
-        <li>
-          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path class="check" fill="#093F68" d="M10.319.768l1.363 1.464-7.128 6.634L.319 4.924 1.682 3.46l2.871 2.674z"/></svg> Advanced analytics and reports
-        </li>
-        <li>
-          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path class="check" fill="#093F68" d="M10.319.768l1.363 1.464-7.128 6.634L.319 4.924 1.682 3.46l2.871 2.674z"/></svg> High marketplace visibility
-        </li>
-        <li>
-          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path class="check" fill="#093F68" d="M10.319.768l1.363 1.464-7.128 6.634L.319 4.924 1.682 3.46l2.871 2.674z"/></svg> 5% fee per transaction
-        </li>
+        <ListItem liText="Custom domain"/>
+        <ListItem liText="Advanced analytics and reports"/>
+        <ListItem liText="High marketplace visibility"/>
+        <ListItem liText="5% fee per transaction"/>
       </ul>
     </div>
   </div>
@@ -97,10 +85,6 @@
     left: 30px;
     top: -24px;
   }
-  
-  .odd * .check {
-    fill: var(--color-cyan);
-  }
 
   .even {
     background-color: var(--color-cyan);
@@ -115,7 +99,7 @@
     top: -33px;
   }
 
-  .even h3 {
+  .even h3, .even h4 {
     color: var(--color-bg);
   }
 
@@ -146,9 +130,5 @@
     display: grid;
     margin-top: 19px;
     gap: 12px;
-  }
-
-  li svg {
-    margin-right: 11px;
   }
 </style>

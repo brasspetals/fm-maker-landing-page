@@ -1,17 +1,14 @@
 <script>
-  export let src
-  export let heading
-  export let description
-  export let passions = false;
+  export let feature
 </script>
 
 <div class="feature">
   <div class="feature-img">
-    <img src="{src}" alt="" class={passions && 'passions'}>
+    <img src="{feature.src}" alt="" class={feature.passions && 'passions'}>
   </div>
   <div class="feature-text">
-    <h3>{heading}</h3>
-    <p>{description} </p>
+    <h3>{feature.heading}</h3>
+    <p>{feature.description} </p>
   </div>
 </div>
 

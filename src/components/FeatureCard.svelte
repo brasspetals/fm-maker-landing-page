@@ -4,7 +4,7 @@
 
 <div class="feature">
   <div class="feature-img">
-    <img src="{feature.src}" alt="" class={feature.passions && 'passions'}>
+    <img src="{feature.src}" alt="" class:passions={feature.passions}>
   </div>
   <div class="feature-text">
     <h3>{feature.heading}</h3>

@@ -11,7 +11,6 @@ export const pricingPlans = [
   },
   {
     color: 'cyan',
-    blue: false,
     header: 'Dive right in',
     description: 'Ready for the big time? Our paid plan will help you take your business to the next level.',
     cost: '$25.00',

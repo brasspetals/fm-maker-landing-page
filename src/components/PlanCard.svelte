@@ -9,7 +9,7 @@
       <p>{plan.description}</p>
     </div>
     <div class="plan-cost">
-      <h4>{plan.cost}</h4>
+      <p class="cost">{plan.cost}</p>
       <p>{plan.frequency}</p>
     </div>
     <ul class="plan-features">
@@ -53,12 +53,12 @@
     top: -33px;
   }
 
-  .cyan h3, .cyan h4 {
+  .cyan h3 {
     color: var(--color-bg);
   }
 
   .plan-heading {
-    margin-bottom: 26px;
+    margin-bottom: 21px;
   }
 
   h3 {
@@ -77,12 +77,17 @@
     align-items: center;
     justify-content: start;
     gap: 9px;
+    
+  }
+
+  .cost {
     font-size: 40px;
+    font-weight: 800;
   }
 
   ul {
     display: grid;
-    margin-top: 19px;
+    margin-top: 13px;
     gap: 12px;
   }
 </style>

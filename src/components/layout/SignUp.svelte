@@ -1,15 +1,11 @@
 <script>
-  import Input from '../Input.svelte'
-  import Button from '../Button.svelte'
+  import EmailForm from '../EmailForm.svelte'
 </script>
 
 <section class="signup">
   <div class="contianer">
     <h2>Get notified when we launch</h2>
-    <form action="#" id="form">
-      <Input/>
-      <Button type="submit" text="Get notified"/>
-    </form>
+    <EmailForm/>
   </div>
 </section>
 
@@ -29,10 +25,5 @@
   h2 {
     padding: 0 40px;
     margin-bottom: 31px;
-  }
-
-  form {
-    display: grid;
-    gap: 24px;
   }
 </style>

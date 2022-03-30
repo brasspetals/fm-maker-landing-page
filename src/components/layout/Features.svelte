@@ -1,6 +1,6 @@
 <script>
-  import Feature from './FeatureCard.svelte'
-  import { features }  from '../../scripts/features'
+  import Feature from '../FeatureCard.svelte'
+  import { features }  from '../../../scripts/features'
 </script>
 
 <section class="features">

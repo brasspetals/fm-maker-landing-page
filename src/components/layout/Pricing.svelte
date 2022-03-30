@@ -1,6 +1,6 @@
 <script>
-  import PlanCard from './PlanCard.svelte'
-  import { pricingPlans }  from '../../scripts/pricingPlans'
+  import PlanCard from '../PlanCard.svelte'
+  import { pricingPlans }  from '../../../scripts/pricingPlans'
 </script>
 
 <section class="pricing">

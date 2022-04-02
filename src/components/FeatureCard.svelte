@@ -47,4 +47,16 @@
   p {
     max-width: 38ch;
   }
+
+  @media screen and (min-width: 700px) {
+    .feature {
+      grid-auto-flow: column;
+      gap: 55px;
+      align-items: center;
+    }
+
+    p {
+      max-width: 36.5ch;
+    }
+  }
 </style>

@@ -24,18 +24,33 @@
     gap: 56px;
   }
 
-  .heading {
-    max-width: 40ch;
-  }
-
   h2 {
     font-size: 24px;
-    margin-bottom: 27px;
+    margin-bottom: 26px;
+  }
+
+  p {
+    max-width: 40ch;
   }
 
   .plans {
     display: grid;
-    gap: 67px;
+    gap: 64px;
     text-align: left;
+  }
+
+  @media screen and (min-width: 700px) {
+    .pricing {
+      padding: 85px 24px;
+      gap: 55px;
+    }
+
+    p {
+      max-width: 60ch;
+    }
+
+    .plans {
+      gap: 66px;
+    }
   }
 </style>

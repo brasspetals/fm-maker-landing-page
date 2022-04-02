@@ -30,20 +30,20 @@
     background-color: var(--color-blue);
     color: var(--color-white);
     margin-top: 24px;
-    padding: 46px 30px 30px;
+    padding: 48px 30px 32px;
   }
 
   .blue::before {
     content: url('/images/icon-free.svg');
     position: absolute;
     left: 30px;
-    top: -24px;
+    top: -23px;
   }
 
   .cyan {
     background-color: var(--color-cyan);
     color: var(--color-bg);
-    padding: 60px 30px 30px;
+    padding: 60px 30px 34px;
   }
 
   .cyan::before {
@@ -87,7 +87,25 @@
 
   ul {
     display: grid;
-    margin-top: 13px;
+    margin-top: 12px;
     gap: 12px;
+  }
+
+  @media screen and (min-width: 700px) {
+    .plan-heading {
+      margin-bottom: 18px;
+    }
+
+    .blue {
+      padding: 48px 38px;
+    }
+
+    .blue::before {
+      left: 38px;
+    }
+
+    .cyan {
+      padding: 60px 38px;
+    }
   }
 </style>

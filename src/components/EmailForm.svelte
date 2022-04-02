@@ -1,5 +1,5 @@
 <script>
-  import { fade } from 'svelte/transition';
+  import { fade, fly } from 'svelte/transition';
   import Button from './Button.svelte'
   
   let value;
@@ -9,7 +9,7 @@
 
   const validate = () => {
     invalid = true
-    console.log(value)
+    
     if (value == "" || value == undefined) {
       error = "Oops! Please add your email"
     } else if (!value.match(emailRegex)) {
@@ -34,6 +34,8 @@
 <style>
   form {
     position: relative;
+    width: 100%;
+    max-width: 400px;
     display: grid;
     gap: 24px;
   }
@@ -65,5 +67,14 @@
     position: absolute;
     top: -22px;
     left: 16px;
+  }
+
+  @media screen and (min-width: 550px) {
+    form {
+      grid-auto-flow: column;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      max-width: 476px;
+    }
   }
 </style>

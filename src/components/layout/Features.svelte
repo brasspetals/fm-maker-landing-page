@@ -23,4 +23,22 @@
     justify-items: center;
     gap: 56px;
   }
+
+  @media screen and (min-width: 700px) {
+    .features {
+      text-align: left;
+      padding: 56px 24px;
+    }
+
+    .feature-container {
+      justify-items: left;
+      max-width: 574px;
+      margin: 0 auto;
+      gap: 39.5px;
+    }
+
+    :global(.feature-container > :nth-child(odd)) {
+      margin-left: 58px;
+    }
+  }
 </style>

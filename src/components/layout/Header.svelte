@@ -7,14 +7,20 @@
     <a href="/"><img src="/images/logo.svg" alt="Maker - Home"></a>
   </div>
   <div class="hero">
-    <div class="hero-img-1">
-      <img src="/images/illustration-hero-mobile.png" alt="">
+    <div class="hero-img hero-img-left">
+      <picture>
+        <source media="(min-width: 700px)" srcset="/images/illustration-hero-left.svg">
+        <img src="/images/illustration-hero-mobile.png" alt="">
+      </picture>
     </div>
     <div class="hero-text">
       <h1>Get paid for the work you <span>love</span> to do.</h1>
       <p>The 9-5 grind is so last century. We believe in living life on your own terms. Whether you’re looking to escape the rat race or set up a side hustle, we’ve got you covered.</p>
+      <img class="scroll" src="/images/icon-scroll.svg" alt="">
     </div>
-    <div class="hero-img-2"></div>
+    <div class="hero-img hero-img-right">
+      <img src="/images/illustration-hero-right.svg" alt="">
+    </div>
   </div>
 </header>
 
@@ -23,22 +29,23 @@
     display: grid;
     justify-items: center;
     position: relative;
-    padding: 40px 0 146px;
+    padding: 40px 0 72px;
+    overflow-x: hidden;
   }
 
   .hero {
     padding-top: 60px;
     text-align: center;
-    overflow: hidden;
     display: grid;
     justify-items: center;
+    overflow-x: hidden;
     gap: 48px;
   }
 
-  .hero img {
+  .hero-img-left img {
     display: block;
     width: 109%;
-    max-width: 650px;
+    max-width: 600px;
   }
 
   .hero-text {
@@ -60,18 +67,51 @@
   }
 
   p {
-    max-width: 42ch;
+    max-width: 48ch;
   }
 
-  .hero-img-2 {
+  .scroll {
+    margin-top: 8px;
+  }
+
+  .hero-img-right {
     display: none;
   }
 
-  header::after {
-    content: url('/images/icon-scroll.svg');
-    position: absolute;
-    bottom: 67px;
-    left: 50%;
-    transform: translateX(-50%);
+
+  @media screen and (min-width: 700px) {
+    header {
+      padding: 48px 0;
+    }
+
+    .logo {
+      margin-left: 39px;
+      justify-self: left;
+    }
+
+    .hero {
+      padding-top: 72px;
+      grid-template-columns: 1fr 475px 1fr;
+      gap: 0;
+      align-items: start;
+    }
+
+    .hero-img img {
+      width: unset;
+      height: 357px;
+    }
+
+    .hero-img-right {
+      display: block;
+    } 
+
+    .hero-text {
+      padding: 52px 0;
+      background-image: url('/images/bg-hero-squiggle.svg');
+      background-size: 86%;
+      background-repeat: no-repeat;
+      background-position-x: center;
+      background-position-y: 33px;
+    }
   }
 </style>

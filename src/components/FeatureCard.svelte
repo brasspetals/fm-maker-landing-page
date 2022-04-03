@@ -16,14 +16,14 @@
   .feature {
     display: grid;
     justify-items: center;
-    gap: 32px;
+    gap: 2rem;
   }
 
   .feature-img {
     background-color: var(--color-blue);
-    height: 124px;
-    width: 120px;
-    border-radius: 45px;
+    height: 7.75rem;
+    width: 7.5rem;
+    border-radius: 2.8125rem;
     display: grid;
     align-items: center;
     justify-content: center;
@@ -35,13 +35,13 @@
   }
 
   .passions {
-    transform: translateX(4px);
+    transform: translateX(0.25rem);
   }
 
   h3 {
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 1.366;
-    margin-bottom: 11px;
+    margin-bottom: 0.6875rem;
   }
 
   p {
@@ -51,12 +51,37 @@
   @media screen and (min-width: 700px) {
     .feature {
       grid-auto-flow: column;
-      gap: 55px;
+      gap: 3.4375rem;
       align-items: center;
     }
 
     p {
       max-width: 36.5ch;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .feature {
+      grid-auto-flow: row;
+      gap: 3rem;
+      justify-items: left;
+    }
+
+    .feature-img {
+      height: 10.25rem;
+      width: 10rem;
+    }
+
+    .feature-img img {
+      width: 100%;
+    }
+
+    h3 {
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      max-width: 27ch;
     }
   }
 </style>

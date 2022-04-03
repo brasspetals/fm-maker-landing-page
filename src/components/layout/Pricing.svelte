@@ -20,13 +20,12 @@
     display: grid;
     justify-items: center;
     text-align: center;
-    padding: 72px 24px;
-    gap: 56px;
+    padding: 4.5rem 1.5rem;
+    gap: 3.5rem;
   }
 
   h2 {
-    font-size: 24px;
-    margin-bottom: 26px;
+    margin-bottom: 1.625rem;
   }
 
   p {
@@ -35,14 +34,14 @@
 
   .plans {
     display: grid;
-    gap: 64px;
+    gap: 4rem;
     text-align: left;
   }
 
   @media screen and (min-width: 700px) {
     .pricing {
-      padding: 85px 24px;
-      gap: 55px;
+      padding: 5.3125rem 1.5rem;
+      gap: 3.4375rem;
     }
 
     p {
@@ -50,7 +49,24 @@
     }
 
     .plans {
-      gap: 66px;
+      gap: 4.125rem;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .pricing {
+      padding: 6.28125rem 0 6.375rem;
+      gap: 6.5625rem;
+    }
+
+    h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    .plans {
+      grid-auto-flow: column;
+      gap: 1.875rem;
+      align-items: center;
     }
   }
 </style>

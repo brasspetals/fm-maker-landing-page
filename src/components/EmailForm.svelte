@@ -35,46 +35,51 @@
   form {
     position: relative;
     width: 100%;
-    max-width: 400px;
+    max-width: 25rem;
     display: grid;
-    gap: 24px;
+    gap: 1.5rem;
   }
 
   input {
     background-color: var(--color-blue);
     color: var(--color-white);
-    font-size: 15px;
+    font-size: .9375rem;
     line-height: 1.667;
     font-weight: 800;
-    border: 2px solid var(--color-blue);
-    border-radius: 24px;
-    height: 48px;
-    padding: 0 16px;
+    border: .125rem solid var(--color-blue);
+    border-radius: 1.5rem;
+    height: 3rem;
+    padding: 0 1rem;
     transition: all .4s ease;
   }
 
   input:focus-visible {
-    border: 2px solid var(--color-cyan);
+    border: .125rem solid var(--color-cyan);
   }
 
   .invalid, .invalid:focus-visible {
-    border: 2px solid var(--color-red);
+    border: .125rem solid var(--color-red);
   }
 
   #error {
-    font-size: 12px;
+    font-size: 0.75rem;
     color: var(--color-red);
     position: absolute;
-    top: -22px;
-    left: 16px;
+    top: -1.375rem;
+    left: 1.125rem;
   }
 
   @media screen and (min-width: 550px) {
     form {
       grid-auto-flow: column;
       grid-template-columns: 1fr auto;
-      gap: 18px;
-      max-width: 476px;
+      gap: 1rem;
+      max-width: 29.75rem;
+    }
+
+    #error {
+      top: unset;
+      bottom: -1.625rem;
     }
   }
 </style>

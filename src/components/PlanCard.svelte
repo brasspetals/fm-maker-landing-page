@@ -21,36 +21,36 @@
 
 <style>
   .plan {
-    border-radius: 8px;
-    max-width: 445px;
+    border-radius: .5rem;
+    max-width: 27.8125rem;
     position: relative;
   }
 
   .blue {
     background-color: var(--color-blue);
     color: var(--color-white);
-    margin-top: 24px;
-    padding: 48px 30px 32px;
+    margin-top: 1.5rem;
+    padding: 3rem 1.875rem 2rem;
   }
 
   .blue::before {
     content: url('/images/icon-free.svg');
     position: absolute;
-    left: 30px;
-    top: -23px;
+    left: 1.875rem;
+    top: -1.4325rem;
   }
 
   .cyan {
     background-color: var(--color-cyan);
     color: var(--color-bg);
-    padding: 60px 30px 34px;
+    padding: 3.75rem 1.875rem 2.125rem;
   }
 
   .cyan::before {
     content: url('/images/icon-paid.svg');
     position: absolute;
-    left: 37px;
-    top: -33px;
+    left: 2.3125rem;
+    top: -2.0625rem;
   }
 
   .cyan h3 {
@@ -58,13 +58,13 @@
   }
 
   .plan-heading {
-    margin-bottom: 21px;
+    margin-bottom: 1.3125rem;
   }
 
   h3 {
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 1.3889;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
   }
 
   .plan-heading p {
@@ -76,36 +76,42 @@
     grid-auto-flow: column;
     align-items: center;
     justify-content: start;
-    gap: 9px;
+    gap: .5625rem;
     
   }
 
   .cost {
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: 800;
   }
 
   ul {
     display: grid;
-    margin-top: 12px;
-    gap: 12px;
+    margin-top: .75rem;
+    gap: .75rem;
   }
 
   @media screen and (min-width: 700px) {
     .plan-heading {
-      margin-bottom: 18px;
+      margin-bottom: 1.125rem;
     }
 
     .blue {
-      padding: 48px 38px;
+      padding: 3rem 2.375rem;
     }
 
     .blue::before {
-      left: 38px;
+      left: 2.375rem;
     }
 
     .cyan {
-      padding: 60px 38px;
+      padding: 3.75rem 2.375rem;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .blue {
+      margin-top: 0;
     }
   }
 </style>

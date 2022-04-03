@@ -21,36 +21,36 @@
     display: grid;
     justify-items: center;
     position: relative;
-    padding: 40px 0 72px;
+    padding: 2.5rem 0 4.5rem;
     overflow-x: hidden;
   }
 
   .hero {
-    padding-top: 60px;
+    padding-top: 3.75rem;
     text-align: center;
     display: grid;
     justify-items: center;
-    gap: 48px;
+    gap: 3rem;
   }
 
   .hero-image-mobile {
     display: block;
     width: 109%;
-    max-width: 600px;
-    transform: translateX(17px);
+    max-width: 37.5rem;
+    transform: translateX(1.0625rem);
   }
 
   .hero-text {
-    padding: 0 24px;
+    padding: 0 1.5rem;
     display: grid;
     justify-items: center;
-    gap: 24px;
+    gap: 1.5rem;
   }
 
   h1 {
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 1.25;
-    padding: 0 38px;
+    padding: 0 2.375rem;
     max-width: 20ch;
   }
 
@@ -68,7 +68,7 @@
 
   @media screen and (min-width: 700px) {
     header {
-      padding: 48px 0 52px;
+      padding: 3rem 0 52px;
     }
 
     .logo {
@@ -77,7 +77,7 @@
     }
 
     .hero {
-      padding-top: 72px;
+      padding-top: 4.5rem;
       align-items: start;
       position: relative;
       width: 100%;
@@ -125,7 +125,7 @@
 
   @media screen and (min-width: 1200px) {
     header {
-      padding: 81px 0;
+      padding: 81px 0 94.5px;
       margin: 0 auto;
       max-width: 1554px;
     }
@@ -158,7 +158,7 @@
     }
 
     h1 {
-      font-size: 48px;
+      font-size: 3rem;
       line-height: 1.1667;
       padding: 0;
       max-width: 18ch;

@@ -10,7 +10,7 @@
 <style>
   
   li svg {
-    margin-right: 11px;
+    margin-right: .6875rem;
   }
 
   .blue {

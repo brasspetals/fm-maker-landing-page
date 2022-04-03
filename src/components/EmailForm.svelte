@@ -53,6 +53,11 @@
     transition: all .4s ease;
   }
 
+  input::placeholder {
+    color: var(--color-white);
+    opacity: 0.4;
+  }
+
   input:focus-visible {
     border: .125rem solid var(--color-cyan);
   }

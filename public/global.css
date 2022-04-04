@@ -1,10 +1,27 @@
 :root {
   --color-white: rgb(255, 255, 255);
 	--color-cyan: rgb(62, 234, 231);
+	--color-cyan-fade:rgba(62, 234, 231, .3);
 	--color-red: rgb(255, 41, 101);
 	--color-grey: rgb(119, 127, 152);
 	--color-blue: rgb(9, 62, 103);
 	--color-bg: rgb(8, 12, 33);
+	--pos-trackball: 13px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 *,

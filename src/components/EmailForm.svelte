@@ -1,11 +1,14 @@
 <script>
-  import { fade, fly } from 'svelte/transition';
+  import { fade } from 'svelte/transition';
   import Button from './Button.svelte'
-  
-  let value;
-  let error = '';
-  let invalid = false;
-  const emailRegex = /^[a-zA-Z][a-zA-Z0-9\-\_\.]+@[a-zA-Z0-9]{2,}\.[a-zA-Z0-9]{2,}$/;
+  import IntersectionObserver from 'svelte-intersection-observer'
+
+  let element
+  let intersecting
+  let value
+  let error = ''
+  let invalid = false
+  const emailRegex = /^[a-zA-Z][a-zA-Z0-9\-\_\.]+@[a-zA-Z0-9]{2,}\.[a-zA-Z0-9]{2,}$/
 
   const validate = () => {
     invalid = true
@@ -23,13 +26,16 @@
   }
 </script>
 
-<form novalidate id="form" on:submit|preventDefault={validate}>
-  <input type="email" name="email" class:invalid={invalid} id="email" placeholder="Email address" aria-label="Email address" aria-invalid={invalid} aria-describedby="error" bind:value={value}>
-  {#if invalid}
-    <p id="error" aria-live="polite" transition:fade="{{ duration: 300 }}">{error}</p>
-  {/if}
-  <Button type="submit" text="Get notified"/>
-</form>
+
+<IntersectionObserver {element} once bind:intersecting threshold={0.2}>
+  <form novalidate id="form" on:submit|preventDefault={validate} class="{intersecting ? 'intersecting' : 'hidden'}" bind:this={element}>
+    <input type="email" name="email" class:invalid={invalid} id="email" placeholder="Email address" aria-label="Email address" aria-invalid={invalid} aria-describedby="error" bind:value={value}>
+    {#if invalid}
+      <p id="error" aria-live="polite" transition:fade="{{ duration: 300 }}">{error}</p>
+    {/if}
+    <Button type="submit" text="Get notified"/>
+  </form>
+</IntersectionObserver>
 
 <style>
   form {

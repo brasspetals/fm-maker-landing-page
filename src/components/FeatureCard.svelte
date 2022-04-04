@@ -1,16 +1,22 @@
 <script>
+  import IntersectionObserver from 'svelte-intersection-observer'
+
+  let element
+  let intersecting
   export let feature
 </script>
 
-<div class="feature">
-  <div class="feature-img">
-    <img src="{feature.src}" alt="" class:passions={feature.passions}>
+<IntersectionObserver {element} once bind:intersecting threshold={0.1}>
+  <div class="feature {intersecting ? 'intersecting' : 'hidden'}" bind:this={element}>
+    <div class="feature-img">
+      <img src="{feature.src}" alt="" class:passions={feature.passions}>
+    </div>
+    <div class="feature-text">
+      <h3>{feature.heading}</h3>
+      <p>{feature.description} </p>
+    </div>
   </div>
-  <div class="feature-text">
-    <h3>{feature.heading}</h3>
-    <p>{feature.description} </p>
-  </div>
-</div>
+</IntersectionObserver>
 
 <style>
   .feature {
@@ -49,6 +55,10 @@
   }
 
   @media screen and (min-width: 700px) {
+    .intersecting {
+      animation-delay: .5s;
+    }
+
     .feature {
       grid-auto-flow: column;
       gap: 3.4375rem;

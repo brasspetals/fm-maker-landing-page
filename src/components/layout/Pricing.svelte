@@ -1,19 +1,25 @@
 <script>
   import PlanCard from '../PlanCard.svelte'
   import { pricingPlans }  from '../../../scripts/pricingPlans'
+  import IntersectionObserver from 'svelte-intersection-observer'
+
+  let element
+  let intersecting
 </script>
 
-<section class="pricing">
-  <div class="heading">
-    <h2>Our pricing plans</h2>
-    <p>We only make money when our creators make money. Our plans are always affordable, and it’s completely free to get started.</p>
-  </div>
-  <div class="plans">
-    {#each pricingPlans as plan}
-      <PlanCard plan={plan}/>
-    {/each}
-  </div>
-</section>
+<IntersectionObserver {element} once bind:intersecting threshold={0.2}>
+  <section class="pricing">
+    <div class="heading {intersecting ? 'intersecting' : 'hidden'}" bind:this={element}>
+      <h2>Our pricing plans</h2>
+      <p>We only make money when our creators make money. Our plans are always affordable, and it’s completely free to get started.</p>
+    </div>
+    <div class="plans">
+      {#each pricingPlans as plan}
+        <PlanCard plan={plan}/>
+      {/each}
+    </div>
+  </section>
+</IntersectionObserver>
 
 <style>
   .pricing {

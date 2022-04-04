@@ -4,7 +4,6 @@
 
 <style>
   .mouse {
-    margin-top: 0.5rem;
     background: var(--color-cyan-fade)
     linear-gradient(
       transparent 0%,
@@ -17,7 +16,8 @@
     height: 2.625rem;
     border-radius: 6.25rem;
     background-size: 100% 200%;
-    animation: colorSlide 2.4s linear infinite, nudgeMouse 2.4s ease-out infinite;;
+    animation: colorSlide 3s linear infinite backwards, nudgeMouse 3s ease-out infinite backwards;
+    animation-delay: 1.9s;
   }
 
   .mouse::before,
@@ -41,7 +41,8 @@
     height: 0.25rem;
     border-radius: 100%;
     top: 0.8125rem;
-    animation: trackBallSlide 2.4s linear infinite;
+    animation: trackBallSlide 3s linear infinite backwards;
+    animation-delay: 1.9s;
   }
 
   @keyframes colorSlide { 
@@ -81,11 +82,5 @@
     0% { transform: translateY(0); }
     70% { transform: translateY(0.3125rem); }
     100% { transform: translateY(0); }
-  }
-
-  @media screen and (min-width: 1200px) {
-    .mouse {
-      margin-top: 2.5625rem;
-    }
   }
 </style>

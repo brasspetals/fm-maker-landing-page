@@ -6,7 +6,7 @@
 	--color-grey: rgb(119, 127, 152);
 	--color-blue: rgb(9, 62, 103);
 	--color-bg: rgb(8, 12, 33);
-	--pos-trackball: 13px;
+	--pos-trackball: 0.8125rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -21,6 +21,8 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+		animation-delay:  0.01ms !important;
+		animation-fill-mode: forwards !important;
   }
 }
 
@@ -81,4 +83,37 @@ ul {
   width:1px;
   height:1px;
   overflow:hidden;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+	0% {
+		opacity: 0;
+		transform: translateY(1.25rem);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeUpTxt {
+	0% {
+		opacity: 0;
+		transform: translateY(0.9375rem);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.intersecting {
+		animation: fadeUp 1s ease backwards;
+	}
+
+	.hidden {
+		opacity: 0;
+	}
 }

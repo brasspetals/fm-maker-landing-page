@@ -1,8 +1,8 @@
 <script>
   import Mouse from '../Mouse.svelte'
 
- const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
- const reducedMotion = mediaQuery.matches;
+  const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+  const reducedMotion = mediaQuery.matches
 </script>
 
 <header>
@@ -14,8 +14,9 @@
     <div class="hero-text">
       <h1>Get paid for the work you <span>love</span> to do.</h1>
       <p>The 9-5 grind is so last century. We believe in living life on your own terms. Whether you’re looking to escape the rat race or set up a side hustle, we’ve got you covered.</p>
+    <div class="scroll">
       {#if reducedMotion}
-        <img class="scroll" src="/images/icon-scroll.svg" alt="">
+        <img src="/images/icon-scroll.svg" alt="">
       {:else}
         <Mouse/>
       {/if}
@@ -32,12 +33,18 @@
     overflow-x: hidden;
   }
 
+  .logo {
+    animation: fadeUp 1s ease backwards;
+  }
+
   .hero {
     padding-top: 3.75rem;
     text-align: center;
     display: grid;
     justify-items: center;
     gap: 3rem;
+    animation: fadeUp 1s ease backwards;
+    animation-delay: .3s;
   }
 
   .hero-image-mobile {
@@ -59,6 +66,8 @@
     line-height: 1.25;
     padding: 0 2.375rem;
     max-width: 20ch;
+    animation: fadeUpTxt 1s ease backwards;
+    animation-delay: .3s;
   }
 
   span {
@@ -67,10 +76,14 @@
 
   p {
     max-width: 48ch;
+    animation: fadeUpTxt 1s ease backwards;
+    animation-delay: .5s;
   }
 
   .scroll {
     margin-top: 0.5rem;
+    animation: fadeUpTxt 1s ease backwards;
+    animation-delay: .8s;
   }
 
   @media screen and (min-width: 700px) {

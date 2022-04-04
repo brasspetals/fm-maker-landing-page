@@ -1,9 +1,14 @@
 <script>
   import ListItem from './ListItem.svelte'
+  import IntersectionObserver from 'svelte-intersection-observer'
+
+  let element
+  let intersecting
   export let plan
 </script>
 
-  <div class="plan {plan.color}">
+<IntersectionObserver {element} once bind:intersecting threshold={0.1}>
+  <div class="plan {plan.color} {intersecting ? 'intersecting' : 'hidden'}" bind:this={element}>
     <div class="plan-heading">
       <h3>{plan.header}</h3>
       <p>{plan.description}</p>
@@ -18,6 +23,7 @@
       {/each}
     </ul>
   </div>
+</IntersectionObserver>
 
 <style>
   .plan {

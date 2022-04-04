@@ -1,11 +1,17 @@
 <script>
   import EmailForm from '../EmailForm.svelte'
+  import IntersectionObserver from 'svelte-intersection-observer'
+
+  let element
+  let intersecting
 </script>
 
-<section class="signup">
-    <h2>Get notified when we launch</h2>
+<IntersectionObserver {element} once bind:intersecting threshold={0.2}>
+  <section class="signup">
+    <h2 class="{intersecting ? 'intersecting' : 'hidden'}" bind:this={element}>Get notified when we launch</h2>
     <EmailForm/>
-</section>
+  </section>
+</IntersectionObserver>
 
 <style>
   .signup {

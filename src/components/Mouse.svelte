@@ -16,7 +16,7 @@
     height: 2.625rem;
     border-radius: 6.25rem;
     background-size: 100% 200%;
-    animation: colorSlide 3s linear infinite backwards, nudgeMouse 3s ease-out infinite backwards;
+    animation: colorSlide 2.5s linear infinite backwards, nudgeMouse 2.5s ease-out infinite backwards;
     animation-delay: 1.9s;
   }
 
@@ -41,7 +41,7 @@
     height: 0.25rem;
     border-radius: 100%;
     top: 0.8125rem;
-    animation: trackBallSlide 3s linear infinite backwards;
+    animation: trackBallSlide 2.5s linear infinite backwards;
     animation-delay: 1.9s;
   }
 

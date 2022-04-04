@@ -27,7 +27,7 @@
 </script>
 
 
-<IntersectionObserver {element} once bind:intersecting threshold={0.2}>
+<IntersectionObserver {element} once bind:intersecting threshold={0.3}>
   <form novalidate id="form" on:submit|preventDefault={validate} class="{intersecting ? 'intersecting' : 'hidden'}" bind:this={element}>
     <input type="email" name="email" class:invalid={invalid} id="email" placeholder="Email address" aria-label="Email address" aria-invalid={invalid} aria-describedby="error" bind:value={value}>
     {#if invalid}

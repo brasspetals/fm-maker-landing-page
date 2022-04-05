@@ -42,8 +42,12 @@
     animation: fadeUp 1s ease backwards;
   }
 
+  .logo img {
+    display: block;
+  }
+
   .hero {
-    padding-top: 3.75rem;
+    padding-top: 4.125rem;
     text-align: center;
     display: grid;
     justify-items: center;
@@ -102,7 +106,7 @@
     }
 
     .hero {
-      padding-top: 4.5rem;
+      padding-top: 4.875rem;
       align-items: start;
       position: relative;
       width: 100%;
@@ -122,11 +126,11 @@
       position: absolute;
       left: 50%;
       transform: translateX(-176%);
-      top: 4.6875rem;
+      top: 5rem;
     }
 
     .hero-text {
-      padding: 3.25rem 0;
+      padding: 3.125rem 0;
       background-image: url('/images/bg-hero-squiggle.svg');
       background-size: 86%;
       background-repeat: no-repeat;
@@ -144,7 +148,7 @@
       position: absolute;
       left: 50%;
       transform: translateX(75%);
-      top: 4.5625rem;
+      top: 4.8125rem;
     }
   }
 
@@ -162,7 +166,7 @@
     }
 
     .hero {
-      padding-top: 6.0625rem;
+      padding-top: 6.375rem;
       width: 100%;
       overflow: hidden;
     }
@@ -172,7 +176,7 @@
       height: 28.6875rem;
       width: 25.5rem;
       transform: translateX(-189.5%);
-      top: 6.75rem;
+      top: 7.125rem;
     }
 
     .hero-text {
@@ -202,7 +206,7 @@
       height: 27.75rem;
       width: 24.75rem;
       transform: translateX(97%);
-      top: 7.3125rem;
+      top: 7.625rem;
     }
   }
 </style>

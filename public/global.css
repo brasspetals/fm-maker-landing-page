@@ -108,15 +108,6 @@ ul {
 	}
 }
 
-@keyframes fade {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
 @media (prefers-reduced-motion: no-preference) {
 	.intersecting {
 		animation: fadeUp 1s ease backwards;
@@ -124,9 +115,5 @@ ul {
 
 	.hidden {
 		opacity: 0;
-	}
-
-	.fade {
-		animation: fade 1s ease backwards;
 	}
 }

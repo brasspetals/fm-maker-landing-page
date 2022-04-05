@@ -7,7 +7,7 @@
 </script>
 
 <IntersectionObserver {element} once bind:intersecting threshold={0.3}>
-  <section class="signup {intersecting ? 'fade' : 'hidden'}" bind:this={element}>
+  <section class="signup {intersecting ? 'intersecting' : 'hidden'}" bind:this={element}>
     <h2 class="{intersecting ? 'intersecting' : 'hidden'}">Get notified when we launch</h2>
     <EmailForm/>
   </section>

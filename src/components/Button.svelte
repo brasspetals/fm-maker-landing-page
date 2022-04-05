@@ -17,7 +17,14 @@
     border-radius: 1.5rem;
     height: 3rem;
     padding: 0 1.5rem;
-    transition: all .4s ease;
+    transition-property: color, border, background-color;
+    transition-duration: .4s;
+    transition-timing-function: ease;
+  }
+
+  button:focus-visible {
+    outline: 0.125rem dashed var(--color-cyan);
+    outline-offset: 0.3125rem;
   }
 
   button:hover {

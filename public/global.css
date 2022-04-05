@@ -66,14 +66,24 @@ p, li {
 	line-height: 1.667;
 }
 
-button, input, select, textarea {
-	outline: none;
+button, input {
 	font-family: inherit;
 	font-weight: inherit;
 }
 
+@supports selector(:focus-visible) {
+	button, input {
+		outline: none;
+	}
+}
+
 ul {
 	list-style: none;
+}
+
+a:focus {
+	outline: 0.125rem dashed var(--color-cyan);
+	outline-offset: 0.3125rem;
 }
 
 .sr-only {

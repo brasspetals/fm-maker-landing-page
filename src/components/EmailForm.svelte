@@ -56,7 +56,9 @@
     border-radius: 1.5rem;
     height: 3rem;
     padding: 0 1rem;
-    transition: all .4s ease;
+    transition-property: color, border;
+    transition-duration: .4s;
+    transition-timing-function: ease;
   }
 
   input::placeholder {
@@ -64,11 +66,13 @@
     opacity: 0.4;
   }
 
+  input:focus,
   input:focus-visible {
     border: .125rem solid var(--color-cyan);
   }
 
-  .invalid, .invalid:focus-visible {
+  .invalid, 
+  .invalid:focus-visible {
     border: .125rem solid var(--color-red);
   }
 

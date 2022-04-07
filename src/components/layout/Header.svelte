@@ -3,11 +3,6 @@
 
   const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
   const reducedMotion = mediaQuery.matches
- 
-  let userAgentString = navigator.userAgent;
-  let chromeAgent = userAgentString.indexOf("Chrome") > -1;
-  let safariAgent = userAgentString.indexOf("Safari") > -1;
-  if ((chromeAgent) && (safariAgent)) safariAgent = false;
 </script>
 
 <header>
@@ -20,7 +15,7 @@
       <h1>Get paid for the work you <span>love</span> to do.</h1>
       <p>The 9-5 grind is so last century. We believe in living life on your own terms. Whether you’re looking to escape the rat race or set up a side hustle, we’ve got you covered.</p>
     <div class="scroll">
-      {#if reducedMotion || safariAgent}
+      {#if reducedMotion}
         <img src="/images/icon-scroll.svg" alt="">
       {:else}
         <Mouse/>

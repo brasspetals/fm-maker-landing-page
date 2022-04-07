@@ -38,17 +38,15 @@ Users should be able to:
 
 ### What I Learned
 
-First Svelte project, so I'm sure there's much to be improved upon. Still getting used to component-based structure/development, but so far I like it! 
+First Svelte project, so I'm sure there's much to be improved upon. Still getting used to component-based structure/development, but so far I like it! The offical Svelte tutorial is fantastic, and I found The Net Ninja's video tutorials (link in Useful Resources) also immensely helpful.
 
-Safari continues to plague me. In this project, the `.invalid` and `focus` styles for the input are not showing up, and I can't figure out why. Any insight into this will be greatly appreciated! The CSS mouse animation also had some serious issues in Safari, so I opted to have the original svg icon be displayed both in Safari and for those who prefer reduced motion.
+Safari continues to plague me. ~~In this project, the `.invalid` and `focus` styles for the input are not showing up, and I can't figure out why. Any insight into this will be greatly appreciated! The CSS mouse animation also had some serious issues in Safari, so I opted to have the original svg icon be displayed both in Safari and for those who prefer reduced motion.~~
 
-Speaking of, the animated mouse is heavily inspired by (read: balatantly stolen and lightly tinkered with) [Ryan Mulligan's CSS Site Scroll Micro Animation](https://codepen.io/hexagoncircle/pen/aZWOdE) - link also in resource section.
-
+**Edit:** Turns out my Safari was out of date! 😅 Everything works in 15.4 👍 Well, almost. Keyboard tabbing doesn't seem to pick up the maker logo in the header as a link, seemingly skipping it in Safari. The outlines also display oddly on the attribution links when tabbing through them. 🤦‍♀️
 
 ### Useful Resources
 
 - [Official Svelte Tutorial](https://svelte.dev/tutorial/basics)
 - [Video Tutorial Playlist: The Net Ninja - Svelte Tutorial for Beginners](https://youtube.com/playlist?list=PL4cUxeGkcC9hlbrVO_2QFVqVPhlZmz7tO) 
 - [Article: Svelte Transitions and Accessibility](https://geoffrich.net/posts/svelte-summit-2021/)
-- [Article: How to detect the user browser (Safari, Chrome, IE, Firefox and Opera) using JavaScript?](https://www.geeksforgeeks.org/how-to-detect-the-user-browser-safari-chrome-ie-firefox-and-opera-using-javascript/) - Used to detect Safari in order to swap the custom css mouse animation for the static svg version.
-- [Ryan Mulligan's CSS Site Scroll Micro Animation](https://codepen.io/hexagoncircle/pen/aZWOdE) 
+- [Ryan Mulligan's CSS Site Scroll Micro Animation](https://codepen.io/hexagoncircle/pen/aZWOdE) - Heavily inspired by/blatantly stolen from and lightly tinkered with for the hero.

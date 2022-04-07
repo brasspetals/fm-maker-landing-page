@@ -15,7 +15,7 @@
     </div>
     <div class="plan-cost">
       <p class="cost">{plan.cost}</p>
-      <p>{plan.frequency}</p>
+      <p class="frequency">{plan.frequency}</p>
     </div>
     <ul class="plan-features">
       {#each plan.lis as li}
@@ -73,7 +73,8 @@
     margin-bottom: 1.25rem;
   }
 
-  .plan-heading p {
+  .plan-heading p,
+  .frequency {
     opacity: 0.6;
   }
 

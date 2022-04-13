@@ -100,6 +100,12 @@
       justify-self: left;
     }
 
+    a:focus img,
+    a:focus-visible img {
+      outline: 0.125rem dashed var(--color-cyan);
+      outline-offset: 0.3125rem;
+    }
+
     .hero {
       padding-top: 4.875rem;
       align-items: start;
